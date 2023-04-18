@@ -75,6 +75,7 @@ def train(agent, env, e, t, train_start, epsilon, min_epsilon, anneal_epsilon, i
 
         avail_action = env.get_avail_actions()
         action, utility_list = agent.sample_action(node_representation, avail_action, epsilon)
+        env.last_action = np.array(torch.tensor(action).detach().tolist())
         reward, done, info = env.step(action, q_values = utility_list, vdn = vdn)
         reward /=200
 
