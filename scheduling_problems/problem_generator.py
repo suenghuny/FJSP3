@@ -11,13 +11,13 @@ mode = 'training' #'training' #'test1', 'test2', 'test3'
 
 #
 
-process_time_list = pd.read_csv('scheduling_problems/dataset1_process_time.csv').values.tolist()
-ops_name_array = pd.read_csv('scheduling_problems/dataset1_ops_name.csv').values
+process_time_list = pd.read_csv('scheduling_problems/dataset4_process_time.csv').values.tolist()
+ops_name_array = pd.read_csv('scheduling_problems/dataset4_ops_name.csv').values
 ops_name_array = np.reshape(ops_name_array, (1, -1))
 ops_name_list = ops_name_array[0].tolist()
-ops_type_list = pd.read_csv('scheduling_problems/dataset1_ops_type.csv').values.tolist()
-alternative_machine_list = pd.read_csv('scheduling_problems/dataset1_alternative_machine.csv').values.tolist()
-setup_list = pd.read_csv('scheduling_problems/dataset1_setup_time.csv').values.tolist()
+ops_type_list = pd.read_csv('scheduling_problems/dataset4_ops_type.csv').values.tolist()
+alternative_machine_list = pd.read_csv('scheduling_problems/dataset4_alternative_machine.csv').values.tolist()
+setup_list = pd.read_csv('scheduling_problems/dataset4_setup_time.csv').values.tolist()
 maxlen = len(process_time_list[0])
 ###
 for k in range(len(process_time_list)):
@@ -62,7 +62,7 @@ print(ops_type_list)
 #sp1 = [2, 1, 1, 1, 3, 1, 1, 1, 4, 1, 1, 1, 1, 4, 2]
 #sp1 = [8, 5, 6, 7]
 #sp1 = [5, 6, 3, 3]
-sp1 = [7]*12
+sp1 = [3,3]
 problems = [sp1]
 # tp1 = [7, 2, 13,2, 8, 10, 2, 8,3,4, 1, 2, 4,4,10]
 # tp2 = [4, 8, 8, 4,3, 3, 6, 5, 6,5, 3, 12, 4, 4, 5]
